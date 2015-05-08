@@ -1,0 +1,39 @@
+<template name="feed2">
+  <ul>
+    {{#each players}}
+      <li> {{name}} </li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="feed1">
+  <ul>
+    {{#each players}}
+      <li> {{name}} </li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="main">
+  <div class="feed">
+    <h2>Random Feed 1</h2>
+    <button class="feed1">toggle feed 1</button>
+    <div>count: {{countFeed1}}</div>
+    {{#if showFeed1}}
+      {{>feed1}}
+    {{/if}}
+  </div>
+
+  <div class="feed">
+    <h2>Random Feed 2</h2>
+    <button class="feed2">toggle feed 2</button>
+    <div>count: {{countFeed2}}</div>
+    {{#if showFeed2}}
+      {{>feed2}}
+    {{/if}}
+  </div>
+</template>
+
+<body>
+  {{>main}}
+</body>

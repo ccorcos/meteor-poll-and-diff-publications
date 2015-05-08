@@ -1,0 +1,16 @@
+<template name="list">
+  <ul>
+    {{#each players}}
+      <li> {{name}} </li>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="main">
+  <h2>Random 5</h2>
+  {{>list players=players}}
+</template>
+
+<body>
+  {{>main}}
+</body>
